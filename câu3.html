@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm kí tự nguyên âm</title>
+</head>
+<body>
+<script>
+    let inputString = prompt('nhập chuỗi của bạn');
+    let nguyenam = ['a', 'o', 'e', 'i', 'u'];
+    let count = 0;
+    let chuoinguyenam = [];
+
+    function checknguyenam(string) {
+        for (let i = 0; i < string.length; i++) {
+            for (let j = 0; j < nguyenam.length; j++) {
+                if (string[i] === nguyenam[j]) {
+                    chuoinguyenam.push(string[i]);
+                    count++;
+                }
+            }
+        }
+        if (chuoinguyenam.length == 0) {
+            document.write('chuỗi của bạn là: ' + '"' + string + '"' + ' không chứa nguyên âm nào')
+        } else {
+            document.write('chuỗi của bạn là: ' + '"' + string + '"' + ' có chứ nguyên âm là ' + chuoinguyenam)
+        }
+    }
+    checknguyenam(inputString);
+</script>
+</body>
+</html>
